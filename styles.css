@@ -1,24 +1,84 @@
+:root {
+    --background: #f6ede4;
+    --dark: #211509;
+    --glow: #e1f531;
+    --glow-2: #d9f103;
+    --flower: #ffccef;
+    --electro: #5542bb;
+    --accent: #ff6315;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--accent);
+}
+
+.header {
+    width: 100%;
+    margin-top: 70px;
+    color: var(--background);
+    text-align: center;
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+#btn {
+    width: 150px;
+    height: 50px;
+    border: 4px solid var(--dark);
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
+}
+
+#btn:hover {
+    background-color: var(--glow);
+    cursor: pointer;
+}
+
 .container {
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 .rows {
-    height: fit-content;
+    height: 568px;
     width: fit-content;
     display: flex;
-    flex-direction: row;
-    border: 1px solid black;
+    flex-direction: column;
+    border-top: 4px solid var(--dark);
+    border-bottom: 4px solid var(--dark);
+}
+
+.rows:first-of-type {
+    border-left: 4px solid var(--dark);
+}
+
+.rows:last-of-type {
+    border-right: 4px solid var(--dark);
 }
 
 .cols {
-    width: 30px;
-    height: 30px;
-    border: 1px solid red;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--dark);
+    background-color: var(--flower);
+}
+
+.stroke {
+    background-color: var(--glow);
 }

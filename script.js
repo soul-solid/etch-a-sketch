@@ -20,11 +20,20 @@ function makeCol(colNum) {
     }
 }
 
-function makeRowCol() {
-    makeRow(16);
-    makeCol(16);
+function makeRowCol(row, col) {
+    makeRow(row);
+    makeCol(col);
 }
 
-makeRowCol();
+makeRowCol(16, 16);
 
-    
+/* const cols = document.querySelector(".cols");
+cols.addEventListener("mouseover", () => {
+    cols.style.backgroundColor = "#e1f531";
+});
+
+function sketch(e) {
+    for (let i = 0; i <= e; i++) {
+
+    }
+} */
