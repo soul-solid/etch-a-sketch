@@ -35,14 +35,21 @@ function makeRowCol(cellNum) {
     makeCol(cellNum);
 }
 
-window.onload = () => {makeRowCol(99)};
+window.onload = () => {makeRowCol(16)};
 
 button.addEventListener("click", () => {
     let userInput = prompt("How many squares do you want the grid to have?");
 
-    if (userInput < 0 || userInput > 100) {
-        prompt("Please choose a number between 1-100!");
-    } else {
-        makeRowCol(userInput);
+    while (userInput < 0 || userInput > 100) {
+        alert("Please enter a number between 1-100!");
+        userInput = prompt("How many squares do you want the grid to have?");
+    
+        if (userInput > 0 && userInput < 100) {
+            break;
+        }
     }
+
+    container.innerHTML = "";
+
+    makeRowCol(userInput);
 });
