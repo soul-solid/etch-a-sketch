@@ -27,7 +27,11 @@ function makeCol(colNum) {
 }
 
 function sketch(e) {
-    e.target.style.backgroundColor = "#e1f531";
+    let randomRed = Math.floor(Math.random() * 256);
+    let randomGreen = Math.floor(Math.random() * 256);
+    let randomBlue = Math.floor(Math.random() * 256);
+
+    e.target.style.backgroundColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
 }
 
 function makeRowCol(cellNum) {
